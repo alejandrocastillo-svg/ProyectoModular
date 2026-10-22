@@ -22,7 +22,7 @@ public class SaltoJugador : MonoBehaviour
             if (contadorSaltos < 2)
             {
                 rb.AddForce(
-                    Vector3.up * fuerzaSalto,
+                    Vector3.up * fuerzaSalto, // Modificar la fuerza que se aplica en el segundo salto 
                     ForceMode.Impulse
                 );
 

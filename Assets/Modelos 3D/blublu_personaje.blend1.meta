@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 19b10100a5341414d9e7b25716b9009f
+=======
+<<<<<<<< HEAD:Assets/IDLE_animation.unity.meta
+guid: 7d102caeaa8f54e57a438a355b94f841
+========
+guid: ef48e3116b9d5a74b9b1aac023f7e365
+>>>>>>>> origin/ms2:Assets/Modelos 3D/blublu_personaje.blend1.meta
+>>>>>>> origin/ms2
 DefaultImporter:
   externalObjects: {}
   userData: 

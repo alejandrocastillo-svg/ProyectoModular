@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 48b0ff20ac4f74864b2eb93b27d06ec4
+=======
+guid: 6f94a9f4825b18e4da4cc759b68c2338
+>>>>>>> origin/ms2
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

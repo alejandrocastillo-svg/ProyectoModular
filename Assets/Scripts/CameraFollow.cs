@@ -11,6 +11,7 @@ public class CameraFollow : MonoBehaviour
         if (jugador != null)
         {
             transform.position = jugador.position + desplazamiento;
+            
         }
     }
 }

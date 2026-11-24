@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4355615773326059469}
   - component: {fileID: 4490942803868791812}
   - component: {fileID: 1001444654797396133}
+  - component: {fileID: -3846605814108098684}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Untagged
@@ -182,6 +183,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf080a4a61db8f47af012c8beab91e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColisionJugador
+--- !u!114 &-3846605814108098684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564170144562023276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a75be0d55ac174ab9cbaf3d86c9b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AtaqueJugador
+  danioRapido: 1
+  cadenciaRapida: 0.3
+  danioCarga: 3
+  tiempoCarga: 1
+  cooldownCarga: 3
+  alcance: 2
 --- !u!1001 &2023818819766257049
 PrefabInstance:
   m_ObjectHideFlags: 0

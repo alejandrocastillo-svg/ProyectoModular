@@ -119,6 +119,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &171794918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4449500782601024294, guid: eb7e90b926179dc4d8fde5f3c1af342c, type: 3}
+  m_PrefabInstance: {fileID: 1727810372422494421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &171794925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171794918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9971d45f0c75f04d834d1725a4593c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaEnemigo
+  vidaMaxima: 3
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +676,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CambioNivel
   nombreEscena: Nivel2
   iris: {fileID: 1719819532}
+--- !u!1 &1527233961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7312606960531167498, guid: b5fa4dae275a6bd47a4cab701352cd16, type: 3}
+  m_PrefabInstance: {fileID: 124422757853618203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1527233968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527233961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9971d45f0c75f04d834d1725a4593c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaEnemigo
+  vidaMaxima: 3
+--- !u!1 &1532668401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1730062755793141962, guid: 0fb60b2f8df78fd4e810d9a032f479fa, type: 3}
+  m_PrefabInstance: {fileID: 1738404532520140339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1532668408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532668401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9971d45f0c75f04d834d1725a4593c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaEnemigo
+  vidaMaxima: 3
 --- !u!1 &1719819528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,7 +1081,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7312606960531167498, guid: b5fa4dae275a6bd47a4cab701352cd16, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1527233968}
   m_SourcePrefab: {fileID: 100100000, guid: b5fa4dae275a6bd47a4cab701352cd16, type: 3}
 --- !u!1001 &1727810372422494421
 PrefabInstance:
@@ -1092,7 +1149,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4449500782601024294, guid: eb7e90b926179dc4d8fde5f3c1af342c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 171794925}
   m_SourcePrefab: {fileID: 100100000, guid: eb7e90b926179dc4d8fde5f3c1af342c, type: 3}
 --- !u!1001 &1738404532520140339
 PrefabInstance:
@@ -1153,7 +1213,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1730062755793141962, guid: 0fb60b2f8df78fd4e810d9a032f479fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1532668408}
   m_SourcePrefab: {fileID: 100100000, guid: 0fb60b2f8df78fd4e810d9a032f479fa, type: 3}
 --- !u!1001 &7438124068225297545
 PrefabInstance:
@@ -1171,9 +1234,13 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1001444654797396133, guid: 08dd9bf1180baae45ab3a539e016e9ac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5197694401294317677, guid: 08dd9bf1180baae45ab3a539e016e9ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 5197694401294317677, guid: 08dd9bf1180baae45ab3a539e016e9ac, type: 3}
       propertyPath: m_LocalPosition.y

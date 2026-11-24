@@ -6,7 +6,7 @@ public class ColisionJugador : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemigo"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

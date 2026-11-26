@@ -676,6 +676,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CambioNivel
   nombreEscena: Nivel2
   iris: {fileID: 1719819532}
+--- !u!1 &1430174068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 564170144562023276, guid: 08dd9bf1180baae45ab3a539e016e9ac, type: 3}
+  m_PrefabInstance: {fileID: 7438124068225297545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1430174077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430174068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539ae4e0987681244950e5197e47aaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimacionPersonaje
+  animController: {fileID: 1638819593}
 --- !u!1 &1527233961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7312606960531167498, guid: b5fa4dae275a6bd47a4cab701352cd16, type: 3}
@@ -712,6 +730,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidaEnemigo
   vidaMaxima: 3
+--- !u!95 &1638819593 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5583506789047711752, guid: 08dd9bf1180baae45ab3a539e016e9ac, type: 3}
+  m_PrefabInstance: {fileID: 7438124068225297545}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1719819528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,10 +1301,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5583506789047711752, guid: 08dd9bf1180baae45ab3a539e016e9ac, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 166459ec509b00346b6b27c103af4b91, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 564170144562023276, guid: 08dd9bf1180baae45ab3a539e016e9ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1430174077}
   m_SourcePrefab: {fileID: 100100000, guid: 08dd9bf1180baae45ab3a539e016e9ac, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

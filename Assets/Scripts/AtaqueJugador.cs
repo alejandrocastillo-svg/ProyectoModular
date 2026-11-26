@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -24,9 +25,12 @@ public class AtaqueJugador : MonoBehaviour
     private int contadorPulsaciones = 0;
     private float ultimaPulsacion = -10f;
 
+    AnimacionPersonaje animController; 
+
     void Start()
     {
         col = GetComponent<Collider>();
+        animController = this.gameObject.GetComponent<AnimacionPersonaje>();
     }
 
     void Update()
@@ -36,23 +40,21 @@ public class AtaqueJugador : MonoBehaviour
             return;
         }
 
-        // Recordar hacia dónde mira el jugador
         if (Keyboard.current.aKey.isPressed)
         {
             direccion = -1f;
         }
+
         if (Keyboard.current.dKey.isPressed)
         {
             direccion = 1f;
         }
 
-        // Ataque rápido: Backspace
         if (Keyboard.current.backspaceKey.wasPressedThisFrame)
         {
             AtaqueRapido();
         }
 
-        // Ataque con carga: pulsar Enter 3 veces seguidas y rápido
         if (Keyboard.current.enterKey.wasPressedThisFrame ||
             Keyboard.current.numpadEnterKey.wasPressedThisFrame)
         {
@@ -85,12 +87,13 @@ public class AtaqueJugador : MonoBehaviour
 
         siguienteRapido = Time.time + cadenciaRapida;
         Debug.Log("Ataque rápido");
-        // Aquí irá la animación de ataque rápido (Mixamo)
+
         Golpear(danioRapido);
     }
 
     void AtaqueConCarga()
     {
+        animController.AnimationStatesManager("enterKey");
         if (Time.time < siguienteCarga)
         {
             Debug.Log("Carga en cooldown");
@@ -99,7 +102,7 @@ public class AtaqueJugador : MonoBehaviour
 
         siguienteCarga = Time.time + cooldownCarga;
         Debug.Log("Ataque con carga");
-        // Aquí irá la animación de ataque con carga (Mixamo)
+
         Golpear(danioCarga);
     }
 
@@ -111,6 +114,7 @@ public class AtaqueJugador : MonoBehaviour
         );
 
         HashSet<VidaEnemigo> yaGolpeados = new HashSet<VidaEnemigo>();
+        HashSet<BossGolemAI> bossesGolpeados = new HashSet<BossGolemAI>();
 
         foreach (Collider c in golpeados)
         {
@@ -120,18 +124,30 @@ public class AtaqueJugador : MonoBehaviour
             {
                 vida.RecibirDanio(danio);
             }
+
+            BossGolemAI boss = c.GetComponentInParent<BossGolemAI>();
+
+            if (boss != null && bossesGolpeados.Add(boss))
+            {
+                boss.RecibirDanio(danio);
+            }
         }
     }
 
     Vector3 CentroGolpe()
     {
         Bounds b = col.bounds;
+
         return b.center + Vector3.right * direccion * (b.extents.x + alcance / 2f);
     }
 
     Vector3 MitadGolpe()
     {
-        return new Vector3(alcance / 2f, col.bounds.extents.y, 1.5f);
+        return new Vector3(
+            alcance / 2f,
+            col.bounds.extents.y,
+            1.5f
+        );
     }
 
     void OnDrawGizmosSelected()
